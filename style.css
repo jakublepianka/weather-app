@@ -1,0 +1,330 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	min-height: 100vh;
+	font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+	margin: 0;
+	padding: 0;
+	background-color: #BBDCE5;
+}
+
+body {
+	box-sizing: border-box;
+	background-image: url("./assets/bg-min.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+header {
+	box-sizing: border-box;
+	display: grid;
+	justify-items: center;
+	width: 100%;
+	background-color: #ECEEDF;
+	padding: 1.5rem 2rem;
+	box-shadow: 0 0 50px -10px rgb(0, 0, 0, 0.5);
+}
+
+
+header > h1 {
+	margin: 0;
+	padding: 0 0 0.5rem;
+	font-weight: 500;
+	letter-spacing: 0.3rem;
+	text-indent: 0.3rem;
+}
+
+.data-entry {
+	display: grid;
+	column-gap: 2rem;
+	align-items: end;
+	justify-content: center;
+	grid-template-columns: 1fr auto;
+}
+
+.city-entry {
+	display: flex;
+	grid-template-columns: auto auto;
+	justify-self: center;
+	border-radius: 1rem;
+	box-shadow: 0px 5px 15px -5px rgb(0, 0, 0, 0.5);
+}
+
+input, button {
+	outline: none;
+	border: none;
+	font-size: large;
+	padding: 0.5rem;
+}
+
+input {
+	min-width: 100px;
+	border-radius: 1rem 0 0 1rem;
+}
+
+button {
+	width: fit-content;
+	background-color: #CFAB8D;
+	color: white;
+	font-weight: 800;
+	cursor: pointer;
+	border-radius: 0 1rem 1rem 0;
+	transition: color 0.1s ease-in-out;
+}
+
+button:hover {
+	color: black	;
+}
+
+.unit-entry {
+	display: grid;
+	gap: 0.15rem;
+}
+
+select {
+	outline: none;
+	border: none;
+	padding: 0.3rem;
+	background-color: #CFAB8D;
+	color: white;
+	font-size: 1rem;
+	font-weight: 500;
+	border-radius: 8px;
+	box-shadow: 0px 5px 15px -5px rgb(0, 0, 0, 0.5);
+	cursor: pointer;
+	transition: color 0.1s ease-in-out;
+
+}
+
+select:hover {
+	color: black;
+}
+
+option {
+	border: none;
+	background-color: #CFAB8D;
+	color: white;
+}
+
+.content {
+	display: grid;
+	justify-items: center;
+	padding: 50px 0;
+}
+
+/* 
+	===============================================================
+*/
+
+.weather-container {
+	display: grid;
+	width: 35%;
+	min-width: 515px;
+	background-color: #C0C9EE99;
+	border-radius: 8px;
+	box-shadow: 5px 5px 50px 0px rgb(0, 0, 0, 0.5);
+}
+
+.current-info-container {
+
+	border-radius: 8px 8px 0 0;
+	color:  #002b5c;
+}
+
+.info-header {
+	background-color: rgba(240, 255, 255, 0.2);
+	border-radius: 8px 8px 0 0;
+}
+
+.info-header-text {
+	text-align: center;
+	padding: 0.5rem 0;
+}
+
+.info-header-text::first-letter {
+	text-transform: uppercase;
+}
+
+.data-and-description {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	padding: 0 1rem 1rem;
+	background-color: rgba(240, 255, 255, 0.2);
+	border-radius: 0 0 8px 8px;
+}
+
+.concrete-data-container {
+	display: grid;
+	min-width: 140px;
+	padding: 1rem;
+	gap: 0.5rem;
+	background-color: rgba(240, 255, 255, 0.8);
+	border-radius: 8px 0 0 8px;
+	box-shadow: 0px 5px 15px -5px rgb(0, 0, 0, 0.5);
+	z-index: 1;
+}
+
+.time-span {
+	font-size: 14px;
+}
+
+.localtime {
+	color: #aa6f3f;
+}
+
+.temperature {
+	color: #aa6f3f;
+}
+
+.windspeed-container {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+}
+
+.windspeed-image {
+	width: 32px;
+}
+
+.overall-description-container {
+	display: grid;
+	align-items: center;
+	padding: 0 1.5rem;
+	border-radius: 0 8px 8px 0;
+	background-color: rgba(240, 255, 255, 0.5);
+	box-shadow: 0px 5px 15px -5px rgb(0, 0, 0, 0.5);
+	z-index: 0;
+
+}
+
+/* 
+	===============================================================
+*/
+
+.future-info-container {
+	background-color: whitesmoke;
+	box-shadow: inset 0 10px 15px -10px rgb(0, 0, 0, 0.5);
+}
+
+.future-info-container:last-child {
+	border-radius: 0 0 8px 8px;
+}
+
+.future-info-container:last-child .conditions-container {
+	border-radius: 0 0 0 8px;
+}
+
+.future-info-container:last-child .date-container {
+	border-radius: 0 0 8px 0;
+}
+
+.cond-temp-date {
+	display: grid;
+	grid-template-columns:
+		minmax(94px, 1fr) 
+		minmax(215px, 2fr) 
+		minmax(80px, 120px);
+}
+
+.conditions-container {
+	display: flex;
+	border-bottom: #002b5c solid 6px;
+	justify-content: center;
+	align-items: center;
+	padding-right: 2rem;
+}
+
+.conditions-image {
+	width: 64px;
+}
+
+.temp-wind-container {
+	box-sizing: border-box;
+	min-width: 215px;
+	padding: 1.5rem 2rem 1rem 0.5rem;
+	border-bottom: #002b5c solid 6px;
+}
+
+.temp-range {
+	font-weight: 500;
+}
+
+.day-windspeed {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.day-windspeed-image {
+	width: 24px;
+}
+
+.day-windspeed-text {
+	font-weight: 400;
+}
+
+
+.date-container {
+	box-sizing: border-box;
+	background-color: #002b5c;
+	color: #BBDCE5;
+	padding: 1.5rem 1.2rem;
+	text-align: right;
+	border-bottom: white solid 6px;
+	box-shadow: inset 0 10px 15px -10px rgb(255, 255, 255, 0.8);
+}
+
+@media (max-width: 800px) {
+	.weather-container {
+		width: 100%;
+		min-width: 375px;
+	}
+	.conditions-container {
+		padding: 0 1rem;
+	}
+	.date-container {
+			padding: 1.5rem 0.5rem;
+	}
+
+}
+
+@media (max-width: 502px) {
+	.data-entry {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+
+	.unit-entry {
+		padding-top: 0.8rem;
+		justify-self: center;
+	}
+
+	.conditions-container {
+		min-width: 80px;
+		padding: 0 0.5rem;
+	}
+
+	.temp-wind-container {
+		padding-right: 0.5rem;
+	}
+
+	.date-container {
+		padding: 1.5rem 0.5rem;
+	}
+
+}
+
+@media (max-width: 400px) {
+	header {
+		padding: 1.5rem 0.5rem 1rem;
+	}
+	.weather-container *{
+		font-size: 1em;
+	}
+}
